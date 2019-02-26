@@ -5,7 +5,6 @@ package server
 import (
 	"flag"
 	"fmt"
-	"github.com/gorilla/context"
 	"html/template"
 	"image"
 	"image/color"
@@ -15,6 +14,8 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+
+	"github.com/gorilla/context"
 
 	"github.com/juliofaura/legopic/process"
 )
@@ -117,7 +118,7 @@ func HandleRoot(w http.ResponseWriter, req *http.Request) {
 
 	imgfile, err := os.Open(WEB_PATH + "pics/" + photoID + "_to_process.jpg")
 	if err != nil {
-		log.Fatal("pics/"+photoID+"to_process.jpg", "file not found!")
+		log.Fatal("pics/"+photoID+"_to_process.jpg", "file not found!")
 	}
 	defer imgfile.Close()
 

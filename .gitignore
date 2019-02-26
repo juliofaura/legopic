@@ -1,0 +1,2 @@
+./web/pics/*
+!./web/pics/default_to_process.jpg
