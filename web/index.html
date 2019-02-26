@@ -1,0 +1,57 @@
+<!-- This is a go template. It takes only one argument - the page title -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Legopic">
+    <meta name="author" content="Julio">
+    <link rel="icon" href="/resources/favicon.ico">
+
+    <title>Legopic</title>
+
+  </head>
+
+
+  <body>
+
+      <form enctype="multipart/form-data" action="/upload" method="post">
+          <input type="file" name="uploadfile" />
+          <input type="submit" value="upload" />
+      </form> 
+      <form action="/">
+      <table>
+        <tr>
+          <td>Resolution:</td>
+          <td><input type="number" name="resolution" value="{{.resolution}}"></td>
+          <td>Lego will be {{.dimensions}}</td>
+        </tr>
+        <tr>
+          <td>Thresholds:</td>
+          <td><input type="number" name="thres1" value="{{.thres1}}"></td>
+          <td><input type="number" name="thres2" value="{{.thres2}}"></td>
+          <td><input type="number" name="thres3" value="{{.thres3}}"></td>
+        </tr>
+      </table>
+      <input type="submit" name="action" value="Process!"><br>
+    </form>
+
+    <table>
+      <tr>
+        <td>
+          <p>Original:<br>
+          <img src="/pics/to_process.jpg" alt="Original" width="600">
+        </td>
+        <td>
+          <p>Processed:<br>
+          <img src="/pics/processed.jpg" alt="Processed" width="600">
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
