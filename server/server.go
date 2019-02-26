@@ -16,7 +16,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/juliostr/legopic/process"
+	"github.com/juliofaura/legopic/process"
 )
 
 ///////////////////////////////////////////////////
